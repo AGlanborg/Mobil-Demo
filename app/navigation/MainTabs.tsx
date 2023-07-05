@@ -9,8 +9,7 @@ import TabMiddleScreen from '../screens/TabMiddleScreen';
 import TabRightScreen from '../screens/TabRightScreen'
 
 /**
- * A bottom tab navigator displays tab buttons on the bottom of the display to switch screens.
- * https://reactnavigation.org/docs/bottom-tab-navigator
+ * A bottom tab navigator for the main three tabs/pages
  */
 const BottomTab = createBottomTabNavigator<RootTabParamList>();
 

@@ -1,6 +1,11 @@
 import { Text, View } from '../components/Themed';
 import { general, typography } from '../styles';
 
+/**
+ * Left most tab in "navigation/MainTabs"
+ * 
+ * Displays the user's Favorite number
+ */
 export default function TabLeftScreen() {
   return (
     <View style={[{ ...general.container }]}>

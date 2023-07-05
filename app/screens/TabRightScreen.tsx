@@ -1,6 +1,11 @@
 import { Text, View } from '../components/Themed';
 import { general, typography } from '../styles';
 
+/**
+ * Right most tab in "navigation/MainTabs"
+ * 
+ * Displays the user's Favorite number
+ */
 export default function TabRightScreen() {
   return (
     <View style={[{ ...general.container }]}>

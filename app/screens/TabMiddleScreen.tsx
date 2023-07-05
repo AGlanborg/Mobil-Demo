@@ -1,6 +1,11 @@
 import { Text, View } from '../components/Themed';
 import { general, typography } from '../styles';
 
+/**
+ * Middle tab in "navigation/MainTabs"
+ * 
+ * Displays the user's Favorite number and allows the user to alter favorite number
+ */
 export default function TabMiddleScreen() {
   return (
     <View style={[{ ...general.container }]}>
