@@ -21,13 +21,11 @@ type typeFavorite = {
 }
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
-  const [favorite, setFavorite] = React.useState<number>(NaN)
-
   return (
     <NavigationContainer
       linking={LinkingConfiguration}
       theme={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <RootNavigator favorite={favorite} setFavorite={setFavorite} />
+      <RootNavigator />
     </NavigationContainer>
   );
 }
@@ -37,18 +35,11 @@ export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeNa
  */
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
-function RootNavigator(props: typeFavorite) {
-  let page;
-
-  if (Number.isNaN(props.favorite)) {
-    page = <Stack.Screen name="Login" component={LoginScreen} options={{headerShown: false}} />
-  } else {
-    page = <Stack.Screen name="Root" component={BottomTabNavigator} options={{ headerShown: false }} />
-  }
-
+function RootNavigator() {
   return (
     <Stack.Navigator>
-      { page }
+      <Stack.Screen name="Login" component={LoginScreen} options={{headerShown: false}} />
+      <Stack.Screen name="Root" component={BottomTabNavigator} options={{ headerShown: false }} />
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
       <Stack.Group screenOptions={{ presentation: 'modal' }}>
         <Stack.Screen name="Modal" component={ModalScreen} />
