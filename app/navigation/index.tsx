@@ -15,11 +15,6 @@ import LinkingConfiguration from './LinkingConfiguration';
 import LoginScreen from '../screens/LoginScreen'
 import BottomTabNavigator from './MainTabs';
 
-type typeFavorite = {
-  favorite: number,
-  setFavorite: React.Dispatch<React.SetStateAction<number>>
-}
-
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
     <NavigationContainer
@@ -31,7 +26,7 @@ export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeNa
 }
 
 /**
- * A root stack navigator for selective initial rendering
+ * Root stack navigator for selective initial rendering
  */
 const Stack = createNativeStackNavigator<RootStackParamList>();
 

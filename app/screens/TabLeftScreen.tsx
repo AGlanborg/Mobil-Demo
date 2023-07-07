@@ -1,17 +1,16 @@
-import { Text, View } from '../components/Themed';
-import { general, typography } from '../styles';
+import { Text, View } from "../components/Themed";
+import { general, typography } from "../styles";
 
 /**
  * Left most tab in "navigation/MainTabs"
- * 
+ *
  * Displays the user's Favorite number
  */
-export default function TabLeftScreen() {
+export default function TabLeftScreen(props: { favorite: number }) {
   return (
     <View style={[{ ...general.container }]}>
       <Text style={[{ ...typography.title }]}>My Favorite Number</Text>
-      <View style={[{ ...general.separator }]} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <Text style={[{ ...typography.title }]}>3</Text>
+      <Text style={[{ ...typography.title }]}>{Number.isNaN(props.favorite) ? '' : props.favorite}</Text>
     </View>
   );
 }
