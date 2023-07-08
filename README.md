@@ -12,19 +12,21 @@ $ docker-compose up -d
 
 ### Mobile
 
-Enter the `app` directory and run the starter command
+Enter the `app` directory, install and run the starter command
 
 ```
 $ cd app/
+$ npm install
 $ npm run start
 ```
 
 ### Desktop
 
-Enter the `page` directory and run the starter command
+Enter the `page` directory, install and run the starter command
 
 ```
 $ cd page/
+$ npm install
 $ npm run start
 ```
 
